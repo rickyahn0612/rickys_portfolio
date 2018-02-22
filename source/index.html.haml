@@ -1,3 +1,22 @@
-%section.main-page
-  #ricky-container
-    = image_tag 'ricky_blink.gif', class: 'ricky-image'
+-#%section.main-page
+  -##header
+    -#%h1 RICKY AHN
+    -#%p { Front End Developer }
+  -##image-container
+    -#= image_tag 'ricky_blink.gif', class: 'ricky-image'
+
+#parent-container
+  .left-container
+    #header
+      %h1 RICKY AHN 
+      %h2 FRONT-END
+      %h3 DEVELOPER
+  .right-container
+    #bio-content
+      %p 
+        Etiam a consequat ex. Morbi bibendum enim eget mi placerat interdum. Mauris eget velit sed elit rutrum luctus. Morbi nec ligula finibus odio rutrum finibus. Aenean urna justo, ornare vel nisl venenatis, condimentum laoreet diam. Praesent quis sem cursus nibh sollicitudin luctus sit amet id est. Sed rutrum malesuada nulla eu eleifend. Praesent semper orci vel tellus rhoncus mattis. Sed rutrum malesuada nulla eu eleifend. Praesent semper orci vel tellus rhoncus mattis. 
+    #ricky-image
+      = image_tag 'ricky_blink-iloveimg-cropped.gif', class: 'ricky-image'
+%hr
+
+

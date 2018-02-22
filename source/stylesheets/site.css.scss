@@ -4,7 +4,7 @@ html {
 }
 
 body {
-  background-color: #fbc547;
+  background-color: #6BB1CC;
 	width:100%;
 	height:100%;
 	margin:0px;
@@ -17,7 +17,25 @@ body {
 }
 
 .main-page {
-  #ricky-container {
+	#header { 
+
+		h1 {
+			font-family: 'Anton', sans-serif;
+			font-size: 270px; 
+			margin: 0;
+			padding: 0;	
+			text-align: center;
+		}
+
+		p {
+			margin: 0;
+			padding: 0;	
+			text-align: center;
+			font-size: 50px;
+		}
+	}
+
+  #image-container {
     .ricky-image {
 			max-height: 80%;
 			max-width: 80%;
@@ -35,5 +53,64 @@ body {
 	.ricky-image {
 		max-width: 100% !important;
 		max-height: 100% !important;
+	}
+}
+
+#parent-container {
+	width: 70%;
+	height: 90%;
+	margin: 0 auto;
+	padding-top: 40px;
+	
+	.left-container {
+		width: 50%;
+		float: left;
+	}
+
+	.right-container {
+		width: 50%;
+		float: right;
+	}
+
+	#header {
+		line-height: 90px;
+
+		h1 {
+			font-size: 100px;
+			font-weight: 100;
+			margin: 0;
+			padding: 0;
+		}
+
+		h2 {
+			font-size: 100px;
+			margin: 0;
+			padding: 0;
+		}
+
+		h3 {
+			font-size: 100px;
+			margin: 0;
+			padding: 0;
+			color: white;
+			opacity: 0.8;
+		}
+	}
+
+	#bio-content {
+		line-height: 25px;
+		letter-spacing: .5px;
+		background: white;
+		width: 70%;
+		float: left;
+		padding: 4px 25px;
+		opacity: 0.5;
+	}
+
+	#ricky-image {
+		img { 
+			width: 20%; 
+			float: right;
+		}
 	}
 }
