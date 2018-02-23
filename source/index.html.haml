@@ -6,17 +6,60 @@
     -#= image_tag 'ricky_blink.gif', class: 'ricky-image'
 
 #parent-container
-  .left-container
-    #header
-      %h1 RICKY AHN 
-      %h2 FRONT-END
-      %h3 DEVELOPER
-  .right-container
-    #bio-content
+  .row
+    .col-md-6
+      #header
+        %h1 RICKY AHN 
+        %h2 FRONT-END
+        %h3 DEVELOPER
+      %hr
       %p 
-        Etiam a consequat ex. Morbi bibendum enim eget mi placerat interdum. Mauris eget velit sed elit rutrum luctus. Morbi nec ligula finibus odio rutrum finibus. Aenean urna justo, ornare vel nisl venenatis, condimentum laoreet diam. Praesent quis sem cursus nibh sollicitudin luctus sit amet id est. Sed rutrum malesuada nulla eu eleifend. Praesent semper orci vel tellus rhoncus mattis. Sed rutrum malesuada nulla eu eleifend. Praesent semper orci vel tellus rhoncus mattis. 
-    #ricky-image
-      = image_tag 'ricky_blink-iloveimg-cropped.gif', class: 'ricky-image'
-%hr
+        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+      %hr
+      .row
+        .col-md-6
+          .sub-header
+            %p Reason #1
+          .skills
+            %h3 I KNOW <span style="color: white; font-weight: bold;">STUFF</span>
+            %ul
+              %li HTML
+              %li CSS
+              %li Javascript
+              %li Ruby on Rails
+              %li React
+        .col-md-6
+          .sub-header
+            %p Reason #2
+          .skills
+            %h3 I'M <span style="color: white; font-weight: bold;">LEARNING</span> THINGS
+            %p
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis vel ante facilisis, lobortis tortor in, sodales est.
+        .col-md-12.portfolio
+          .sub-header
+            %p Reason #3
+          .skills
+            %h3 I'VE DONE <span style="color: white; font-weight: bold;"> WORK </span>
+            %p
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis vel ante facilisis, lobortis tortor in, sodales est.
+            %br
+            .row
+              .col.md-4
+                = image_tag 'screenshot_acadia_projects.jpg'
+              .col.md-4
+                = image_tag 'screenshot_acadia_projects.jpg'
+              .col.md-4
+                = image_tag 'screenshot_acadia_projects.jpg'
+            %br
+            .row
+              .col.md-4
+                = image_tag 'screenshot_acadia_projects.jpg'
+              .col.md-4
+                = image_tag 'screenshot_acadia_projects.jpg'
+              .col.md-4
+                = image_tag 'screenshot_acadia_projects.jpg'
 
 
+    .col-md-6
+      #ricky-image
+        = image_tag 'ricky_blink-iloveimg-cropped.gif', class: 'ricky-image'
