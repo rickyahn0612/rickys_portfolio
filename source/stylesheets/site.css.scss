@@ -78,6 +78,11 @@ body.root-container {
           li {
             list-style: none; 
             margin-bottom: 10px;
+
+            span { 
+              font-size: 13px; 
+              font-style: italic; 
+            }
           } 
         }
       }  
@@ -96,7 +101,7 @@ body.root-container {
   }
 }
 
-@media only screen and (max-width: 1046px) {
+@media only screen and (max-width: 1127px) {
   .portfolio-container { width: 78vw; }
 }
 
