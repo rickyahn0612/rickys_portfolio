@@ -1,22 +1,28 @@
 // This is where it all goes :)
 
 $( document ).ready(function() {
+
+	function scrollToTop() {
+  	$('html, body').animate({ scrollTop: 0 }, 1500);
+	}
+
   $('.portfolio-image-container img, .port-button').click(function(){
     $('.left-container').fadeOut(function(){
-      $('html, body').animate({ scrollTop: 0 }, 1500);
+			scrollToTop();
     });
-    $('.right-container').addClass('mobile-view').animate({'left': 0}, 1500, function(){
-      $('.port-view-container').fadeIn(1000, function(){
-        $('.close-button').animate({'opacity' : 1, top: 0}).addClass('close-button-mobile');
+    $('.right-container').addClass('mobile-view').animate({'left': 0}, 1000, function(){
+      $('.port-view-container').fadeIn(700, function(){
+        $('.close-button').animate({top: 0}, 200).addClass('close-button-mobile');
       });
     });
   });
 
   $('.close-button').click(function(){
-    $('.close-button').animate({top: -1000}, 1000).removeClass('close-button-mobile', function() {
+    $('.close-button').animate({top: -500}, 500).removeClass('close-button-mobile', function() {
       $('.port-view-container').fadeOut(function() {
-      $('.right-container').removeClass('mobile-view').animate({'left': '50%'}, 1200)
+      $('.right-container').removeClass('mobile-view').animate({'left': '50%'}, 900)
         $('.left-container').fadeIn()
+				scrollToTop();
       });
     })
   })
