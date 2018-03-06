@@ -7,7 +7,7 @@ $( document ).ready(function() {
     });
     $('.right-container').animate({'left': 0}, 1500, function(){
       $('.port-view-container').fadeIn(1000, function(){
-        $('.close-button').fadeIn();
+        $('.close-button').animate({'opacity' : 1, top: 0});
       });
     });
   });
