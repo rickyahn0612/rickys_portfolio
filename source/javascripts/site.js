@@ -12,7 +12,7 @@ $( document ).ready(function() {
     });
     $('.right-container').addClass('mobile-view').animate({'left': 0}, 1000, function(){
       $('.port-view-container').fadeIn(700, function(){
-        $('.close-button').animate({top: 0}, 200).addClass('close-button-mobile');
+        $('.close-button').animate({top: 0}, 800).addClass('close-button-mobile');
       });
     });
   });
@@ -20,7 +20,7 @@ $( document ).ready(function() {
   $('.close-button').click(function(){
     $('.close-button').animate({top: -500}, 500).removeClass('close-button-mobile', function() {
       $('.port-view-container').fadeOut(function() {
-      $('.right-container').removeClass('mobile-view').animate({'left': '50%'}, 900)
+      $('.right-container').removeClass('mobile-view').animate({'left': '50%'}, 1000)
         $('.left-container').fadeIn()
 				scrollToTop();
       });
