@@ -173,7 +173,7 @@ body.root-container {
 }
 
 .close-button { 
-  position: absolute;
+  position: fixed;
 	top: -500px;
   margin-left: 50px;
   color: white;

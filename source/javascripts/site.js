@@ -12,7 +12,7 @@ $( document ).ready(function() {
     });
     $('.right-container').addClass('mobile-view').animate({'left': 0}, 1000, function(){
       $('.port-view-container').fadeIn(700, function(){
-        $('.close-button').animate({top: 0}, 800).addClass('close-button-mobile');
+        $('.close-button').animate({top: 40}, 800).addClass('close-button-mobile');
       });
     });
   });
