@@ -134,11 +134,11 @@ body.root-container {
     }
 
     .portfolio-grid-container {
-      margin-bottom: 10px;
+			margin: 0 auto;
+			width: 90%; 
 
       .port-description {
-        float: left;
-        width: 35%;
+        width: 90%;
 
         h3 { 
 					margin: 0; 
@@ -146,18 +146,28 @@ body.root-container {
 				}
 
 				.description {
-					font-size: 11px;
-					margin: 0;
+					margin: 0 0 10px 0;
 				}
       }
 
-      img { 
-				float: right;
-        width: 63%; 
-        margin-bottom: 40px;
-        padding-left: 10px;
-				height: 20vw;
-      }
+			.port-image-container {
+
+				img { 
+					width: 100%;
+					height: 30vw;
+					float: right;
+					margin-bottom: 40px;
+					padding-left: 10px;
+				}
+
+				.case-study-btn {
+					position: absolute;						
+					bottom: 8px;;
+					right: 0;
+					color: white;
+					margin-right: 6vw;
+				}
+			}
     }
   }
 }
@@ -205,9 +215,9 @@ body.root-container {
         margin-right: 4.8vw;
       }
 
-      .port-description { 
-        display: none; 
-      }
+			.port-description { 
+				margin: 0 auto;
+			}
     }
   }
 
