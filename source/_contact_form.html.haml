@@ -1,0 +1,18 @@
+.contact-form
+  %h1.contact-form-header
+    %span.thin-font Lets 
+    Work 
+    %span.o-white-font Together!
+  %form{method: "POST", name: "contact", netlify: ""}
+    %label Name
+    %input{name: 'name', type: 'text'}
+    %br
+    %br
+    %label Email
+    %input{name: 'email', type: 'email'}
+    %br
+    %br
+    %label Message
+    %textarea{name: 'message'}
+    %button{type: 'submit'}
+      Get In Touch! 

@@ -21,6 +21,7 @@ $( document ).ready(function() {
     $('.left-container').fadeOut(function() {
 			scrollToTop();
       $('.close-button').animate({top: 0}, 800).addClass('close-button-mobile')
+      $('.contact-form').fadeIn();
     });
   });
 
