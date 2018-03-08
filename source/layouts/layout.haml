@@ -28,9 +28,10 @@
     %meta{:content => "images/favicon/mstile-150x150.png", :name => "msapplication-square150x150logo"}
     %meta{:content => "images/favicon/mstile-310x150.png", :name => "msapplication-wide310x150logo"}
     %meta{:content => "images/favicon/mstile-310x310.png", :name => "msapplication-square310x310logo"}
+
     %link{:href => "https://fonts.googleapis.com/css?family=Anton", :rel => "stylesheet"}
     %script{:src => "https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"}
-    = javascript_include_tag "site"
+    = javascript_include_tag "site", 'form_request'
     %script{:defer => "defer", :src => "https://use.fontawesome.com/releases/v5.0.8/js/all.js"}
     %script{:src => "https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.js"}
   %body.root-container
