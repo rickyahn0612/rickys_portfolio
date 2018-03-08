@@ -10,7 +10,7 @@
         <strong>Front End Developer</strong> specializing in <strong>UI/UX</strong> 
         build for front and back end applications.  I enjoy building sites and working 
         with people!  
-        = link_to 'Lets get in touch.', '#'
+        = link_to 'Lets get in touch.', '#', class: 'contact-form-link'
         .port-button
           %span
             View Portfolio
@@ -44,7 +44,6 @@
             %span +5 years experience 
             %p
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam
-
     .sub-content-container.learn-container
       .sub-header
         %p Reason #2 
@@ -52,7 +51,6 @@
         %h3 I'M <span style="color: white; font-weight: bold;">LEARNING</span> THINGS 
         %p
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis vel ante facilisis, lobortis tortor in, sodales est.
-
       .portfolio-container
         .sub-header
           %p Reason #3
@@ -64,92 +62,9 @@
           %br
           .portfolio-image-container
             = image_tag 'screenshot_acadia_projects.jpg'
-
   .right-container
     .ricky-image
       = image_tag 'ricky-blink.gif', class: 'ricky-image'
   .clear
-  .port-view-container
-    %ul
-      %li
-        .portfolio-grid-container
-          .port-description
-            %h3 The Base
-            %p 
-              lorem ipsum dolor sit amet, consectetur adipiscing elit. cras sed dui eget tellus lacinia vulputate. sed suscipit urna et convallis volutpat. fusce finibus nunc id nibh bibendum, nec tincidunt turpis semper.
-            %p.description 
-              %strong 
-                Front End:
-              HTML/CSS/JavaScript
-          .port-image-container
-            = image_tag 'screenshot_the_base.gif'
-          .clear
-      %li
-        .portfolio-grid-container
-          .port-description
-            %h3 Ra-Solar Asset Management
-            %p 
-              lorem ipsum dolor sit amet, consectetur adipiscing elit. cras sed dui eget tellus lacinia vulputate. sed suscipit urna et convallis volutpat. fusce finibus nunc id nibh bibendum, nec tincidunt turpis semper.
-            %p.description 
-              %strong 
-                Front End:
-              HTML/CSS/JavaScript
-              %p.description
-                %strong 
-                  Back End:
-                Ruby on Rails
-          .port-image-container
-            = image_tag 'screenshot_ra_power.gif'
-          .clear
-      %li
-        .portfolio-grid-container
-          .port-description
-            %h3 Acadia
-            %p 
-              lorem ipsum dolor sit amet, consectetur adipiscing elit. cras sed dui eget tellus lacinia vulputate. sed suscipit urna et convallis volutpat. fusce finibus nunc id nibh bibendum, nec tincidunt turpis semper.
-            %p.description 
-              %strong 
-                Front End:
-              HTML/CSS/Backbone
-            %p.description
-              %strong 
-                Back End:
-              Ruby on Rails
-          .port-image-container
-            = image_tag 'screenshot_acadia.gif'
-          .clear
-      %li
-        .portfolio-grid-container
-          .port-description
-            %h3 IronRidge
-            %p 
-              lorem ipsum dolor sit amet, consectetur adipiscing elit. cras sed dui eget tellus lacinia vulputate. sed suscipit urna et convallis volutpat. fusce finibus nunc id nibh bibendum, nec tincidunt turpis semper.
-            %p.description 
-              %strong 
-                Front End:
-              HTML/CSS/JavaScript 
-            %p.description 
-              %strong 
-                Back End:
-              Ruby on Rails
-          .port-image-container
-            = image_tag 'screenshot_ironridge.gif'
-          .clear
-      %li
-        .portfolio-grid-container
-          .port-description
-            %h3 Urban Futsal
-            %p 
-              lorem ipsum dolor sit amet, consectetur adipiscing elit. cras sed dui eget tellus lacinia vulputate. sed suscipit urna et convallis volutpat. fusce finibus nunc id nibh bibendum, nec tincidunt turpis semper.
-            %p.description 
-              %strong 
-                Front End:
-              Wordpress Project
-          .port-image-container
-            = image_tag 'screenshot_urban_futsal.gif'
-          .clear
-
-.close-button
-  %i.fas.fa-times-circle
-  %span
-    CLOSE
+  = partial 'portfolio'
+= partial 'close_button'

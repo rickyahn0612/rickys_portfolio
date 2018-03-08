@@ -16,6 +16,14 @@ $( document ).ready(function() {
     });
   });
 
+  $('.contact-form-link').on('click', function(e){
+    e.preventDefault();
+    $('.left-container').fadeOut(function() {
+			scrollToTop();
+      $('.close-button').animate({top: 0}, 800).addClass('close-button-mobile')
+    });
+  });
+
   $('.close-button').click(function(){
     $('.close-button').animate({top: -500}, 500).removeClass('close-button-mobile', function() {
       $('.port-view-container').fadeOut(function() {

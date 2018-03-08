@@ -3,7 +3,7 @@ $dark-font: #333;
 $white: #fff;
 $black: #000;
 
-$glitch: glitch .2s;
+$glitch: glitch .5s;
 
 body.root-container {
   background-color: $main-bg-color;
@@ -168,6 +168,12 @@ body.root-container {
         h3 { 
 					margin: 0; 
 					font-size: 32px;
+
+					span.thin-font { font-weight: 100; }
+					span.o-white-font { 
+						color: white;
+						opacity: 0.8;	
+					}
 				}
 
 				.description {
@@ -278,7 +284,16 @@ body.root-container {
 }
 
 @keyframes glitch {
-	80% {
+	10% {
+		transform: skew(20deg);
+  }
+
+	50% {
 		transform: skew(620deg);
   }
+
+	90% {
+		transform: skew(-620deg);
+  }
+
 }
