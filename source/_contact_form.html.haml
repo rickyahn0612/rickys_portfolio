@@ -1,9 +1,9 @@
-.contact-form
+.contact-form-container
   %h1.contact-form-header
     %span.thin-font Lets 
     Work 
     %span.o-white-font Together!
-  %form{method: "POST", name: "contact", netlify: ""}
+  %form{method: "POST", name: "contact", netlify: "", class: 'contact-form'}
     %label Name
     %input{name: 'name', type: 'text'}
     %br
@@ -16,3 +16,7 @@
     %textarea{name: 'message'}
     %button{type: 'submit'}
       Get In Touch! 
+  .success-message
+    Thank You For Reaching Out!
+    .return-home
+      Return Home 

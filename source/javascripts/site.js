@@ -21,11 +21,11 @@ $( document ).ready(function() {
     $('.left-container').fadeOut(function() {
 			scrollToTop();
       $('.close-button').animate({top: 0}, 800).addClass('close-button-mobile')
-      $('.contact-form').fadeIn();
+      $('.contact-form-container').fadeIn();
     });
   });
 
-  $('.close-button').click(function(){
+  $('.close-button, .return-home').click(function(){
     $('.close-button').animate({top: -500}, 500).removeClass('close-button-mobile', function() {
       $('.port-view-container').fadeOut(function() {
       $('.right-container').removeClass('mobile-view').animate({'left': '50%'}, 1000)
@@ -34,4 +34,15 @@ $( document ).ready(function() {
       });
     })
   })
+
+	$(".contact-form").submit(function(e) {
+		e.preventDefault();
+
+		var $form = $(this);
+		$.post($form.attr("action"), $form.serialize()).then(function() {
+			$('form').fadeOut(function(){
+				$('.success-message').fadeIn();
+			});
+		});
+	});
 });
