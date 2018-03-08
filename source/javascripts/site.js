@@ -1,7 +1,6 @@
 // This is where it all goes :)
 
 $( document ).ready(function() {
-
 	function scrollToTop() {
   	$('html, body').animate({ scrollTop: 0 }, 1500);
 	}

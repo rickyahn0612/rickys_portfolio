@@ -3,6 +3,8 @@ $dark-font: #333;
 $white: #fff;
 $black: #000;
 
+$glitch: glitch .2s;
+
 body.root-container {
   background-color: $main-bg-color;
 	width:100%;
@@ -25,15 +27,31 @@ body.root-container {
     width: 50%;
     float: left;
     padding-top: 20px;
+		
+		.header {
+			.main-header-font {
+				font-size: 8vw;
+				line-height: 7vw; 
+				margin: 0;
+				padding: 0;	
+				animation: $glitch;
+			}
 
-    .main-header-font {
-      font-size: 8vw;
-      line-height: 7vw; 
-      margin: 0;
-      padding: 0;	
-    }
+			a { 
+				font-weight: 100;
+				color: $white; 
+				opacity: 0.8;
+				transition: all .6s ease;
+
+				&:hover { 
+					opacity: 1;
+					font-weight: bold;
+				}
+			}
+		}
 
     .port-button {
+      position: relative;
       background: #e77e00;
       border-radius: 20px;
       color: $white;
@@ -42,8 +60,13 @@ body.root-container {
       line-height: 35px;
       text-align: center;
       font-weight: bold;
+      transition: all 1s;
 
-      &:hover { cursor: pointer; }
+      &:hover { 
+        cursor: pointer; 
+        box-shadow: 2px 3px 6px #573000;
+				letter-spacing: .4px;
+      }
     }
 
     h1 { font-weight: 100;}
@@ -114,7 +137,9 @@ body.root-container {
     right: 0;
     width: 50%;
 
-    .ricky-image { width: 100%; }
+    .ricky-image { 
+			width: 100%; 
+		}
   }
 
   .port-view-container {
@@ -185,7 +210,10 @@ body.root-container {
     font-size: 20px;
   }
 
-  &:hover { cursor: pointer }
+  &:hover { 
+		animation: $glitch;
+		cursor: pointer 
+	}
 }
 
 .clear { clear: both; }
@@ -247,4 +275,10 @@ body.root-container {
 
 @media only screen and (max-width: 495px) {
   .know-container { width: 78vw !important; }
+}
+
+@keyframes glitch {
+	80% {
+		transform: skew(620deg);
+  }
 }
