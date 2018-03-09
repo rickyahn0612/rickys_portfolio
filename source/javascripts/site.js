@@ -21,15 +21,22 @@ $( document ).ready(function() {
     $('.left-container').fadeOut(function() {
 			scrollToTop();
       $('.close-button').animate({top: 0}, 800).addClass('close-button-mobile')
-      $('.contact-form-container').fadeIn();
+      $('.contact-form-container').animate({top: 0}, 1500, function(){
+        $(this).find('h1').addClass('glitch');
+      });
     });
+  });
+
+  $('input').on('focus', function(){
+    $("label[for='" + this.id + "']").addClass("glitch");
   });
 
   $('.close-button, .return-home').click(function(){
     $('.close-button').animate({top: -500}, 500).removeClass('close-button-mobile', function() {
       $('.port-view-container').fadeOut(function() {
-      $('.right-container').removeClass('mobile-view').animate({'left': '50%'}, 1000)
+        $('.right-container').removeClass('mobile-view').animate({'left': '50%'}, 1000)
         $('.left-container').fadeIn()
+        $('.contact-form-container').animate({top: '-1000px'});
 				scrollToTop();
       });
     })
