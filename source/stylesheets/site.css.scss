@@ -230,7 +230,7 @@ span.o-white-font {
 .contact-form-container {
 	width: 30vw;
 	padding-left: 5vw;
-	margin-top: 7vw;
+	margin-top: 10vw;
 	position: absolute;
 	top: -1000px;
 
@@ -261,7 +261,7 @@ span.o-white-font {
 	}
 
 	textarea {
-		padding-top: 10px;
+		padding: 10px 10px;
 		height: 15vw;
 	}
 
@@ -281,10 +281,32 @@ span.o-white-font {
 		}
 	}
 
-	.success-message {
-		display: none;
+}
+
+.success-message {
+	display: none;
+	width: 41vw;
+
+	.return-home {
+		background: #e77e00;
+		border-radius: 20px;
+		color: $white;
+		width: 160px;
+		height: 35px;
+		line-height: 35px;
+		text-align: center;
+		font-weight: bold;
+		transition: all 1s;
+
+		&:hover { 
+			cursor: pointer; 
+			box-shadow: 2px 3px 6px #573000;
+			letter-spacing: .4px;
+		}
+
 	}
 }
+
 
 @media only screen and (max-width: 1127px) {
   .portfolio-container { width: 78vw; }
@@ -357,7 +379,7 @@ span.o-white-font {
 	.contact-form-container {
 		input { height: 27px; }
 		
-		textarea { height: 200px; }
+		textarea { height: 150px; }
 
 		button {
 			width: 190px;
