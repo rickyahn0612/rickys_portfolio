@@ -4,6 +4,10 @@
     Work 
     %span.o-white-font Together!
   %form{method: "POST", name: "contact", netlify: "", class: 'contact-form', action: '/success.html'}
+    %p.hidden
+      %label
+        Don’t fill this out if you're human:
+        %input{:name => "bot-field"}/
     %label Name
     %input{name: 'name', type: 'text'}
     %br
@@ -14,7 +18,7 @@
     %br
     %label Message
     %textarea{name: 'message'}
-    %div{'netlify-recaptcha' => ''}
+    %div{'data-netlify-recaptcha' => ''}
     %button{type: 'submit'}
       Get In Touch! 
 
