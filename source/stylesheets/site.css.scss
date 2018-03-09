@@ -227,6 +227,64 @@ span.o-white-font {
 
 .clear { clear: both; }
 
+.contact-form-container {
+	width: 30vw;
+	padding-left: 5vw;
+	margin-top: 7vw;
+	position: absolute;
+	top: -1000px;
+
+	.contact-form-header {
+		width: 30vw;
+	}
+
+	input, textarea {
+		border: none;
+		border-radius: 10px;
+		width: 40vw;	
+		margin-bottom: 1vw;
+		margin-top: 5px;
+		padding-left: 10px;
+		font-size: 16px;
+	}
+
+	label {
+		font-size: 18px;
+		font-weight: bold;
+		margin-left: 5px;
+		opacity: .7;
+		transition: .4s all ease;
+	}
+
+	input {
+		height: 35px;
+	}
+
+	textarea {
+		padding-top: 10px;
+		height: 15vw;
+	}
+
+	button { 
+		border: none;
+		background: #e77e00;
+		color: white;
+		font-size: 20px;
+		border-radius: 20px;
+		padding: 4px 14px;	
+    transition: all 1s;
+
+		&:hover {
+			cursor: pointer; 
+			box-shadow: 2px 3px 6px #573000;
+			letter-spacing: .4px;
+		}
+	}
+
+	.success-message {
+		display: none;
+	}
+}
 
 @media only screen and (max-width: 1127px) {
   .portfolio-container { width: 78vw; }
@@ -269,75 +327,44 @@ span.o-white-font {
     font-size: 12px;
 		opacity: .8;
 
+		&:hover { animation: none !important; }
+
     span { 
       position: relative;
       top: 1px;
       font-size: 12px; 
     }
   }
-}
 
-.contact-form-container {
-	width: 30vw;
-	padding-left: 5vw;
-	margin-top: 7vw;
-	position: absolute;
-	top: -1000px;
+  .learn-container { width: 78vw !important; }
 
-	input, textarea {
-		border: none;
-		border-radius: 10px;
-		width: 40vw;	
-		margin-bottom: 1vw;
-		margin-top: 5px;
-		padding-left: 10px;
-		font-size: 16px;
-	}
+	.main-header-font { animation: none !important; }
 
-	label {
-		font-size: 18px;
-		font-weight: bold;
-		margin-left: 5px;
-		opacity: .7;
-		transition: .4s all ease;
-	}
+	.header {  
+		a { 
+			transition: none !important; 
 
-	input {
-		height: 35px;
-	}
-
-	textarea {
-		padding-top: 10px;
-		height: 15vw;
-	}
-
-	button {
-		border: none;
-		background: #e77e00;
-		color: white;
-		font-size: 20px;
-		border-radius: 20px;
-		padding: 4px 14px;	
-    transition: all 1s;
-
-		&:hover {
-			cursor: pointer; 
-			box-shadow: 2px 3px 6px #573000;
-			letter-spacing: .4px;
+			&:hover { font-weight: 100 !important; }
 		}
 	}
 
-	.success-message {
-		display: none;
-	}
-}
-
-@media only screen and (max-width: 967px) {
-  .learn-container { width: 78vw !important; }
+	.ricky-image { margin-top: 30px; }
 }
 
 @media only screen and (max-width: 495px) {
   .know-container { width: 78vw !important; }
+
+	.contact-form-container {
+		input { height: 27px; }
+		
+		textarea { height: 200px; }
+
+		button {
+			width: 190px;
+			margin-top: 10px;
+		}
+
+	}
 }
 
 @keyframes glitch {
