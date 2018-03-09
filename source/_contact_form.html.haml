@@ -3,7 +3,7 @@
     %span.thin-font Lets 
     Work 
     %span.o-white-font Together!
-  %form{method: "POST", name: "contact", netlify: "", class: 'contact-form', action: '/success.html'}
+  %form{method: "POST", "netlify-honeypot" => "bot-field", name: "contact", netlify: "", class: 'contact-form', action: 'thank-you'}
     %p.hidden
       %label
         Don’t fill this out if you're human:
