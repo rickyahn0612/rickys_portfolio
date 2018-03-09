@@ -3,9 +3,9 @@ $(document).ready(function() {
     e.preventDefault();
 
     var $form = $(this);
+    console.log($form.serialize())
     $.post($form.attr("action"), $form.serialize()).then(function() {
       $('form').fadeOut(function(){
-        $('.success-message').fadeIn();
       });
     });
   });

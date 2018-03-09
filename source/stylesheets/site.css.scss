@@ -295,10 +295,12 @@ span.o-white-font {
 
 	input, textarea {
 		border: none;
-		border-radius: 20px;
+		border-radius: 15px;
 		width: 40vw;	
 		margin-bottom: 1vw;
 		margin-top: 5px;
+		padding-left: 10px;
+		font-size: 16px;
 	}
 
 	input {
@@ -306,6 +308,7 @@ span.o-white-font {
 	}
 
 	textarea {
+		padding-top: 10px;
 		height: 15vw;
 	}
 
