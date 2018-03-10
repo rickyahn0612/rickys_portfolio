@@ -3,19 +3,10 @@
     %span.thin-font Lets 
     Work 
     %span.o-white-font Together!
-  %form{method: "POST", "netlify-honeypot" => "bot-field", name: "portfolio-contact", netlify: "", class: 'contact-form', action: 'thank-you'}
-    %input{:name => "bot-field", type: 'hidden'}
-    %label Name
-    %input{name: 'name', type: 'text'}
-    %br
-    %br
-    %label Email
-    %input{name: 'email', type: 'email'}
-    %br
-    %br
-    %label Message
-    %textarea{name: 'message'}
-    %br
-    %button{type: 'submit'}
-      Get In Touch! 
+  - if environment == :development
+    %form{method: "POST", "netlify-honeypot" => "bot-field", name: "portfolio-contact", netlify: "", class: 'contact-form', action: ''}
+      = partial 'input_fields'
+  - else
+    %form{method: "POST", "netlify-honeypot" => "bot-field", name: "portfolio-contact", netlify: "", class: 'contact-form', action: 'thank-you'}
+      = partial 'input_fields'
   = partial '_success'
