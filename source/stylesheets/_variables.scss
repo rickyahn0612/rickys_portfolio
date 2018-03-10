@@ -2,6 +2,8 @@ $main-bg-color: #79b4cb;
 $dark-font: #333;
 $white: #fff;
 $black: #000;
+$shadow: #573000;
+
 $glitch: glitch .5s;
 
 @mixin orangeButton {
@@ -20,7 +22,7 @@ $glitch: glitch .5s;
 
   &:hover { 
     cursor: pointer; 
-    box-shadow: 2px 3px 6px #573000;
+    box-shadow: 2px 3px 6px $shadow;
     letter-spacing: .4px;
   }
 }

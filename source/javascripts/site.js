@@ -5,7 +5,7 @@ $( document ).ready(function() {
   	$('html, body').animate({ scrollTop: 0 }, 1500);
 	}
 
-  $('.portfolio-image-container img, .port-button').click(function(){
+  $('.port-overlay, .port-button').click(function(){
     $('.left-container').fadeOut(function(){
 			scrollToTop();
     });
@@ -37,4 +37,12 @@ $( document ).ready(function() {
       });
     })
   })
+
+  $('.portfolio-image-container').mouseenter(function(){
+    $('.port-overlay').fadeIn();
+  });
+
+  $('.portfolio-image-container').mouseleave(function(){
+    $('.port-overlay').fadeOut();
+  });
 });
