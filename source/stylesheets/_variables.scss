@@ -1,0 +1,41 @@
+$main-bg-color: #79b4cb;
+$dark-font: #333;
+$white: #fff;
+$black: #000;
+$glitch: glitch .5s;
+
+@mixin orangeButton {
+  background: #e77e00;
+  border-radius: 20px;
+  border: none;
+  color: $white;
+  width: 160px;
+  height: 35px;
+  line-height: 35px;
+  padding-top: 0;
+  text-align: center;
+  font-weight: bold;
+  font-size: 16px;
+  transition: all 1s;
+
+  &:hover { 
+    cursor: pointer; 
+    box-shadow: 2px 3px 6px #573000;
+    letter-spacing: .4px;
+  }
+}
+
+@keyframes glitch {
+	10% {
+		transform: skew(20deg);
+  }
+
+	50% {
+		transform: skew(620deg);
+  }
+
+	90% {
+		transform: skew(-620deg);
+  }
+}
+

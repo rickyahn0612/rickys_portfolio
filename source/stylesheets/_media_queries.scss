@@ -1,0 +1,90 @@
+@import 'variables';
+
+@media only screen and (max-width: 1127px) {
+  .portfolio-container { width: 78vw; }
+}
+
+@media only screen and (max-width: 997px) {
+  .parent-container {
+    margin-top: 0; 
+    margin-bottom: 0;
+  }
+
+  .mobile-view { display: none; }
+
+  .port-view-container {
+    width: 100% !important;
+    padding: 0 !important;
+    margin-top: 50px;
+
+    .portfolio-grid-container {
+      img { 
+        width: 90% !important;  
+				height: 50vw !important;
+        margin-right: 4.8vw;
+      }
+
+			.port-description { 
+				margin: 0 auto;
+			}
+    }
+  }
+
+  .close-button-mobile {
+    position: fixed;
+    top: 0;
+    padding-left: 10px;
+    background: $black; 
+    margin-left: 0 !important;
+    width: 100%;
+    height: 40px;
+    line-height: 40px;
+		opacity: .8;
+
+		&:hover { animation: none !important; }
+
+    .ico-text-container {
+      position: relative;
+      top: -2px;
+
+      span { 
+        position: relative;
+        left: -2px;
+        font-size: 16px !important;
+      }
+
+      .svg-inline--fa { font-size: 18px !important; }
+    }
+  }
+
+  .learn-container { width: 78vw !important; }
+
+	.main-header-font { animation: none !important; }
+
+	.header {  
+		a { 
+			transition: none !important; 
+
+			&:hover { font-weight: 100 !important; }
+		}
+	}
+
+	.ricky-image { margin-top: 20px; }
+}
+
+@media only screen and (max-width: 495px) {
+  .know-container { width: 78vw !important; }
+
+	.contact-form-container {
+		input { height: 27px; }
+		
+		textarea { height: 150px; }
+
+		button {
+			width: 190px;
+			margin-top: 10px;
+		}
+
+	}
+}
+

@@ -27,10 +27,6 @@ $( document ).ready(function() {
     });
   });
 
-  $('input').on('focus', function(){
-    $("label[for='" + this.id + "']").addClass("glitch");
-  });
-
   $('.close-button, .return-home').click(function(){
     $('.close-button').animate({top: -500}, 500).removeClass('close-button-mobile', function() {
       $('.port-view-container').fadeOut(function() {

@@ -9,7 +9,6 @@ $(document).ready(function() {
         $('.success-message').fadeIn();
         formArray = $form.serializeArray()
         userName = formArray[1].value
-
         $('.user-message').text("Hi " + userName + "! ");
       });
     });

@@ -1,9 +1,16 @@
-$main-bg-color: #79b4cb;
-$dark-font: #333;
-$white: #fff;
-$black: #000;
+@import 'variables';
+@import 'media_queries';
 
-$glitch: glitch .5s;
+.clear { clear: both; }
+
+.glitch { animation: $glitch; }
+
+.thin-font { font-weight: 100; }
+
+.o-white-font { 
+	color: white;
+	opacity: 0.6;	
+}
 
 body.root-container {
   background-color: $main-bg-color;
@@ -17,15 +24,6 @@ body.root-container {
     "Segoe UI", "Lucida Grande", "Helvetica Neue", "Helvetica", "Fira Sans",
     "Roboto", "Noto", "Droid Sans", "Cantarell", "Oxygen", "Ubuntu",
     "Franklin Gothic Medium", "Century Gothic", "Liberation Sans", sans-serif;
-}
-
-.glitch { animation: $glitch; }
-
-span.thin-font { font-weight: 100; }
-
-span.o-white-font { 
-	color: white;
-	opacity: 0.6;	
 }
 
 .parent-container {
@@ -60,22 +58,7 @@ span.o-white-font {
 		}
 
     .port-button {
-      position: relative;
-      background: #e77e00;
-      border-radius: 20px;
-      color: $white;
-      width: 160px;
-      height: 35px;
-      line-height: 35px;
-      text-align: center;
-      font-weight: bold;
-      transition: all 1s;
-
-      &:hover { 
-        cursor: pointer; 
-        box-shadow: 2px 3px 6px #573000;
-				letter-spacing: .4px;
-      }
+      @include orangeButton;
     }
 
     h1 { font-weight: 100;}
@@ -95,10 +78,10 @@ span.o-white-font {
       .sub-header {
         margin-top: 20px;
         background: rgba(0, 0, 0, 0.2);
-        color: $white;
         width: 80px;
-        text-align: center;
         height: 28px;	
+        text-align: center;
+        color: $white;
 
         p { 
           font-size: 12px; 
@@ -123,8 +106,8 @@ span.o-white-font {
           padding: 0;
 
           li {
-            list-style: none; 
             margin-bottom: 20px;
+            list-style: none; 
 
             span { 
               font-size: 13px; 
@@ -225,12 +208,29 @@ span.o-white-font {
 	}
 }
 
-.clear { clear: both; }
+.contact-button {
+	position: fixed;
+	top: 80px;
+	right: -35px;
+	padding: 0 0 20px 0;
+	color: white;
+	background: red;
+	width: 120px;
+	height: 30px;
+	overflow: hidden;
+	transform: rotate(-90deg); 
+
+	p { 
+		margin: 0;
+		line-height: 30px;
+		text-align: center;
+	}
+}
 
 .contact-form-container {
 	width: 30vw;
 	padding-left: 5vw;
-	margin-top: 10vw;
+	margin-top: 6vw;
 	position: absolute;
 	top: -1000px;
 
@@ -266,21 +266,8 @@ span.o-white-font {
 	}
 
 	button { 
-		border: none;
-		background: #e77e00;
-		color: white;
-		font-size: 20px;
-		border-radius: 20px;
-		padding: 4px 14px;	
-    transition: all 1s;
-
-		&:hover {
-			cursor: pointer; 
-			box-shadow: 2px 3px 6px #573000;
-			letter-spacing: .4px;
-		}
+    @include orangeButton;
 	}
-
 }
 
 .success-message {
@@ -288,117 +275,7 @@ span.o-white-font {
 	width: 41vw;
 
 	.return-home {
-		background: #e77e00;
-		border-radius: 20px;
-		color: $white;
-		width: 160px;
-		height: 35px;
-		line-height: 35px;
-		text-align: center;
-		font-weight: bold;
-		transition: all 1s;
-
-		&:hover { 
-			cursor: pointer; 
-			box-shadow: 2px 3px 6px #573000;
-			letter-spacing: .4px;
-		}
-
+    margin-top: 20px;
+    @include orangeButton;
 	}
-}
-
-
-@media only screen and (max-width: 1127px) {
-  .portfolio-container { width: 78vw; }
-}
-
-@media only screen and (max-width: 997px) {
-  .parent-container {
-    margin-top: 0; 
-    margin-bottom: 0;
-  }
-
-  .mobile-view { display: none; }
-
-  .port-view-container {
-    width: 100% !important;
-    padding: 0 !important;
-    margin-top: 50px;
-
-    .portfolio-grid-container {
-      img { 
-        width: 90% !important;  
-				height: 50vw !important;
-        margin-right: 4.8vw;
-      }
-
-			.port-description { 
-				margin: 0 auto;
-			}
-    }
-  }
-
-  .close-button-mobile {
-    width: 100%;
-    height: 40px;
-    line-height: 40px;
-    background: $black; margin-left: 0;
-    position: fixed;
-    top: 0;
-    padding-left: 20px;
-    font-size: 12px;
-		opacity: .8;
-
-		&:hover { animation: none !important; }
-
-    span { 
-      position: relative;
-      top: 1px;
-      font-size: 12px; 
-    }
-  }
-
-  .learn-container { width: 78vw !important; }
-
-	.main-header-font { animation: none !important; }
-
-	.header {  
-		a { 
-			transition: none !important; 
-
-			&:hover { font-weight: 100 !important; }
-		}
-	}
-
-	.ricky-image { margin-top: 30px; }
-}
-
-@media only screen and (max-width: 495px) {
-  .know-container { width: 78vw !important; }
-
-	.contact-form-container {
-		input { height: 27px; }
-		
-		textarea { height: 150px; }
-
-		button {
-			width: 190px;
-			margin-top: 10px;
-		}
-
-	}
-}
-
-@keyframes glitch {
-	10% {
-		transform: skew(20deg);
-  }
-
-	50% {
-		transform: skew(620deg);
-  }
-
-	90% {
-		transform: skew(-620deg);
-  }
 }
