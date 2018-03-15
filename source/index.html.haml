@@ -1,3 +1,5 @@
+.mailer-icon
+  %i.fa.fa-envelope
 .parent-container 
   .left-container 
     .header 
@@ -11,59 +13,42 @@
         build for front and back end applications.  I enjoy building sites and working 
         with people!  
         = link_to 'Lets get in touch.', '#', class: 'contact-form-link'
-        .port-button
-          %span
-            View Portfolio
-    %hr
-    .sub-content-container.know-container
-      .sub-header
-        %p Reason #1
-      .skills
-        %h3 I KNOW <span style="color: white; font-weight: bold;">STUFF</span>
-        %ul
-          %li 
-            <strong>HTML</strong>
-            %span
-              +5 years experience
-            %p
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam
-          %li
-            <strong>CSS</strong>
-            %span
-              +5 years experience
-            %p
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam
-          %li
-            <strong>JavaScript</strong>
-            %span
-              +5 years experience
-            %p
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam
-          %li
-            <strong>Ruby On Rails</strong>
-            %span +5 years experience 
-            %p
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam
-    .sub-content-container.learn-container
-      .sub-header
-        %p Reason #2 
-      .skills 
-        %h3 I'M <span style="color: white; font-weight: bold;">LEARNING</span> THINGS 
-        %p
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis vel ante facilisis, lobortis tortor in, sodales est.
-      .portfolio-container
-        .sub-header
-          %p Reason #3
-        .skills
-          %h3 I'VE DONE <span style="color: white; font-weight: bold;"> WORK </span>
-          %p
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis vel 
-            ante facilisis.
-          %br
-          .portfolio-image-container
-            = image_tag '/images/screenshot_acadia.gif'
-            .port-overlay
-              %i.fa.fa-eye
+      .skills-icon-container
+        .skill-image-container
+          %h3 HTML
+          %span +6 years experience 
+          = image_tag 'html5-logo-notext.png'
+        .skill-image-container
+          %h3 CSS
+          %span +6 years experience 
+          = image_tag 'css-logo-notext.png'
+        .skill-image-container
+          %h3 JavaScript
+          %span +6 years experience 
+          = image_tag 'javascript-logo-notext.png'
+        .clear
+      %hr 
+      .port-button
+        %span
+          View Portfolio
+
+      -#%ul
+        -#%li 
+          -#<strong>HTML</strong>
+          -#%span
+            -#+5 years experience
+        -#%li
+          -#<strong>CSS</strong>
+          -#%span
+            -#+5 years experience
+        -#%li
+          -#<strong>JavaScript</strong>
+          -#%span
+            -#+5 years experience
+        -#%li
+          -#<strong>Ruby On Rails</strong>
+          -#%span +5 years experience 
+
   .right-container
     .ricky-image
       = image_tag 'ricky-blink.gif', class: 'ricky-image'
