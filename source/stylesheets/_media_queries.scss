@@ -1,8 +1,6 @@
 @import 'variables';
 
-@media only screen and (max-width: 1127px) {
-  .portfolio-container { width: 78vw; }
-}
+@media only screen and (max-width: 1127px) { .portfolio-container { width: 78vw; } }
 
 @media only screen and (max-width: 997px) {
   .parent-container {
@@ -71,6 +69,26 @@
 
 	.ricky-image { margin-top: 20px; }
 }
+
+@media only screen and (max-width: 610px) { 
+  .skill-image-container { display: none; }
+
+  .right-container {
+    top: 50px;
+    
+    .ricky-image {
+      width: 90% !important;  
+    }
+  }
+
+  .contact-form-container { 
+	  input { 
+      height: 25px !important; 
+    }
+  }
+
+}
+
 
 @media only screen and (max-width: 495px) {
   .know-container { width: 78vw !important; }
