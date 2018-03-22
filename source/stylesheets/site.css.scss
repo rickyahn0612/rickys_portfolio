@@ -6,7 +6,6 @@
 .glitch { animation: $glitch; }
 
 .thin-font { font-weight: 100; }
-
 .o-white-font { 
 	color: white;
 	opacity: 0.6;	
@@ -66,11 +65,6 @@ body.root-container {
 
 .parent-container {
   min-height: 100vh;
-		.is-exiting {
-			.parent-left-container-about {
-				animation-direction: alternate-reverse;
-			}
-		}
 
   .parent-inner {
     padding-left: 2%;
@@ -83,12 +77,6 @@ body.root-container {
       left: 2.0%;
       color: $white;
       background: #53c5d3;
-
-			animation-duration: 1s;
-			transition-timing-function: ease-in;
-			animation-fill-mode: both;
-			animation-name: fadeInRight;
-
 
       .main-copy {
 				opacity: 0;
@@ -128,11 +116,9 @@ body.root-container {
 					}
 				}
       }
-
 		}
 
-
-    .parent-left-container {
+    .parent-left-container-about {
 			width: 96vw;
       min-height: 94vh;  
       position: absolute;
@@ -142,8 +128,8 @@ body.root-container {
       background: #53c5d3;
 
 
-      .intro-copy {
-        width: 50%;
+      .intro-copy { 
+				width: 50%;
         margin: 15% auto;
 
         strong { 
@@ -151,35 +137,35 @@ body.root-container {
           top: 30px;
           text-align: center;
           font-size: 4rem; 
-          opacity: 0;
+					opacity: 0;
         } 
 
         span { 
+					opacity: 0;
           line-height: 30px; 
-          opacity: 0;
         }
 
 				a { 
 					text-decoration: none; 
 					color: white;
+
+					.learn-more-button { 
+						opacity: 0;
+						background: #ff5851;
+						padding: 10px;
+						width: 120px;
+						margin-top: 30px;
+						border-radius: 30px;
+						text-align: center;
+
+						&:hover {
+							cursor: pointer; 
+							box-shadow: 2px 3px 6px #573000;
+							letter-spacing: .4px;
+						}
+					}
 				}
 
-        .learn-more-button { 
-					opacity: 0;
-          background: #ff5851;
-          padding: 10px;
-          width: 120px;
-          margin-top: 30px;
-          border-radius: 30px;
-          transition: all 1s ease-in-out;
-          text-align: center;
-
-          &:hover {
-            cursor: pointer; 
-            box-shadow: 2px 3px 6px #573000;
-            letter-spacing: .4px;
-          }
-        }
       }
     }
 
@@ -193,14 +179,88 @@ body.root-container {
       background: #f8f8f8;
 
       .ricky-image {
-				opacity: 0;
         margin: 0 auto;
         height: 94vh; 
         display: block;
-      }
-    
+      } 
     }
   }
 }
 
 
+.parent-container .scene-main {
+	width: 96vw;
+	min-height: 94vh;  
+	position: absolute;
+	top: 3%;
+	left: 2.0%;
+	color: $white; background: #53c5d3;
+
+	.main-copy {
+		opacity: 0;
+		animation-name: fadeIn;
+		animation-delay: 1s;
+		animation-duration: 1s;
+
+		box-sizing: border-box; 
+		width: 70%;
+		margin: 0 auto;
+		word-wrap: break-word;
+
+		h3 {
+			color: black; 
+			font-weight: 900;
+			font-size: 13vh;
+
+			&:last-of-type {
+				position: relative;
+				top: -30px;
+			} 
+		
+			.period { color: #ff5851; }
+		} 
+
+		h4 { font-size: 5vh; }
+
+		ul { 
+			margin-top: 40px;
+			color: black; 
+			font-weight: 500;
+			font-size: 2vh;
+
+			li {
+				margin-bottom: 10px;
+			}
+		}
+	}
+
+	animation-duration: .8s;
+	transition-timing-function: ease-in;
+	animation-fill-mode: both;
+}
+.parent-container .scene-main--fadein {
+	animation-name: width;
+}
+.smooth-state.is-exiting .scene-main {
+	animation-direction: alternate-reverse;
+}
+
+@keyframes fadeIn {
+	0% {
+		opacity: 0;
+	}
+
+	100% {
+		opacity: 1;
+	}
+
+}
+
+@keyframes width {
+  0% {
+    width: 96vw;
+  }
+  100% {
+    width: 48vw;
+  }
+}
