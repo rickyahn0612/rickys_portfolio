@@ -30,35 +30,117 @@ body.root-container {
 }
 
 .mailer-icon {
-	float: right;
+	display: none;
 	position: absolute;
 	top: 5px;
 	right: 10px;
-	z-index: -1;
+	z-index: 1;
 	color: #4CAAD8;
-	font-size: 30px;
+	opacity: .8;
+	font-size: 25px;
   z-index: 10000;
 
-  &:hover {
-		cursor: pointer;
+	.fa-envelope {
+		position: absolute;
+		top: 0;
+		right: 0;
+		z-index: 100;
+
+		&:hover {
+			opacity: 0;
+			cursor: pointer;
+		}
+
+		&:hover + .fa-envelope-open {
+			opacity: 1;
+		}
 	}
-}
+
+	.fa-envelope-open {
+		opacity: 0;
+		position: absolute;
+		top: -3px;
+		right: 0;
+	}
+}	
 
 .parent-container {
   min-height: 100vh;
+		.is-exiting {
+			.parent-left-container-about {
+				animation-direction: alternate-reverse;
+			}
+		}
 
   .parent-inner {
     padding-left: 2%;
 
-    .parent-left-container {
-      width: 96vw;
+    .parent-left-container-about {
+			width: 96vw;
       min-height: 94vh;  
       position: absolute;
       top: 3%;
       left: 2.0%;
-
       color: $white;
       background: #53c5d3;
+
+			animation-duration: 1s;
+			transition-timing-function: ease-in;
+			animation-fill-mode: both;
+			animation-name: fadeInRight;
+
+
+      .main-copy {
+				opacity: 0;
+				box-sizing: border-box; 
+        width: 70%;
+        margin: 0 auto;
+        word-wrap: break-word;
+				animation-duration: 1s;
+				animation-delay: 1s;
+				transition-timing-function: ease-in;
+				animation-fill-mode: both;
+				animation-name: fadeIn;
+
+        h3 {
+					color: black; 
+					font-weight: 900;
+					font-size: 13vh;
+
+					&:last-of-type {
+						position: relative;
+						top: -30px;
+					} 
+				
+					.period { color: #ff5851; }
+        } 
+
+				h4 { font-size: 5vh; }
+
+				ul { 
+					margin-top: 40px;
+					color: black; 
+					font-weight: 500;
+					font-size: 2vh;
+
+					li {
+						margin-bottom: 10px;
+					}
+				}
+      }
+
+		}
+
+
+    .parent-left-container {
+			width: 96vw;
+      min-height: 94vh;  
+      position: absolute;
+      top: 3%;
+      left: 2.0%;
+      color: $white;
+      background: #53c5d3;
+
 
       .intro-copy {
         width: 50%;
@@ -77,6 +159,11 @@ body.root-container {
           opacity: 0;
         }
 
+				a { 
+					text-decoration: none; 
+					color: white;
+				}
+
         .learn-more-button { 
 					opacity: 0;
           background: #ff5851;
@@ -93,41 +180,6 @@ body.root-container {
             letter-spacing: .4px;
           }
         }
-      }
-
-      .main-copy {
-        display: none;
-				box-sizing: border-box; 
-        width: 70%;
-        margin: 0 auto;
-        word-wrap: break-word;
-
-        h3 {
-					color: black; 
-					font-weight: 900;
-					font-size: 13vh;
-
-					&:last-of-type {
-						position: relative;
-						top: -30px;
-					} 
-				
-				.period { color: #ff5851; }
-
-        } 
-
-				h4 { font-size: 5vh; }
-
-				ul { 
-					margin-top: 40px;
-					color: black; 
-					font-weight: 500;
-					font-size: 2vh;
-
-					li {
-						margin-bottom: 10px;
-					}
-				}
       }
     }
 

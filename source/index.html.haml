@@ -1,28 +1,13 @@
-.parent-container
+#main.parent-container
   .parent-inner
     .parent-right-container
       .mailer-icon
         %i.fa.fa-envelope
+        %i.fa.fa-envelope-open
       = image_tag 'ricky-blink.gif', class: 'ricky-image'
     .parent-left-container
       .intro-copy
         <strong>hello!</strong> <span>My name is Ricky Ahn. I am a San Francisco based Front End Developer specializing in UI/UX build for front and back end applications. I enjoy building sites and working with people!</span>
-        .learn-more-button
-          LEARN MORE
-      .main-copy
-        %h3
-          SKI
-        %h3
-          LLS<span class='period'>.</span>
-        .period
-        %h4
-          An overview of your digital strategy.
-        %ul
-          %li Responsive HTML5
-          %li BEM/CSS3 via Sass
-          %li Javascript frameworks (React, AngularJS)
-          %li JQuery
-          %li Content Management Systems (Wordpress, Squarespace, Weebly)
-          %li Ruby on Rails
-          %li Github
-          %li Photoshop
+        = link_to '/about.html' do
+          .learn-more-button
+            LEARN MORE
