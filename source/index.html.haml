@@ -1,40 +1,28 @@
-.mailer-icon
-  %i.fa.fa-envelope
-.parent-container 
-  .left-container 
-    .header 
-      %h1.main-header-font RICKY AHN 
-      %h2.main-header-font FRONT-END 
-      %h3.main-header-font DEVELOPER 
-      %hr 
-      %p 
-        <strong>Hello!</strong>  My name is <strong>Ricky Ahn</strong>.  I am a San Francisco based 
-        <strong>Front End Developer</strong> specializing in <strong>UI/UX</strong> 
-        build for front and back end applications.  I enjoy building sites and working 
-        with people!  
-        = link_to 'Lets get in touch.', '#', class: 'contact-form-link'
-      -#.skills-icon-container
-        -#.skill-image-container
-          -#%h3 HTML
-          -#%span +6 years experience 
-          -#= image_tag 'html5-logo-notext.png'
-        -#.skill-image-container
-          -#%h3 CSS
-          -#%span +6 years experience 
-          -#= image_tag 'css-logo-notext.png'
-        -#.skill-image-container
-          -#%h3 JavaScript
-          -#%span +6 years experience 
-          -#= image_tag 'javascript-logo-notext.png'
-        -#.clear
-      %hr 
-      .port-button
-        %span
-          View Portfolio
-  .right-container
-    .ricky-image
+.parent-container
+  .parent-inner
+    .parent-right-container
+      .mailer-icon
+        %i.fa.fa-envelope
       = image_tag 'ricky-blink.gif', class: 'ricky-image'
-  .clear
-  = partial 'portfolio'
-= partial 'close_button'
-= partial 'contact_form'
+    .parent-left-container
+      .intro-copy
+        <strong>hello!</strong> <span>My name is Ricky Ahn. I am a San Francisco based Front End Developer specializing in UI/UX build for front and back end applications. I enjoy building sites and working with people!</span>
+        .learn-more-button
+          LEARN MORE
+      .main-copy
+        %h3
+          SKI
+        %h3
+          LLS<span class='period'>.</span>
+        .period
+        %h4
+          An overview of your digital strategy.
+        %ul
+          %li Responsive HTML5
+          %li BEM/CSS3 via Sass
+          %li Javascript frameworks (React, AngularJS)
+          %li JQuery
+          %li Content Management Systems (Wordpress, Squarespace, Weebly)
+          %li Ruby on Rails
+          %li Github
+          %li Photoshop
