@@ -78,55 +78,6 @@ body.root-container {
       color: $white;
       background: #53c5d3;
 
-      .main-copy {
-				opacity: 0;
-				box-sizing: border-box; 
-        width: 70%;
-        margin: 0 auto;
-        word-wrap: break-word;
-				animation-duration: 1s;
-				animation-delay: 1s;
-				transition-timing-function: ease-in;
-				animation-fill-mode: both;
-				animation-name: fadeIn;
-
-        h3 {
-					color: black; 
-					font-weight: 900;
-					font-size: 13vh;
-
-					&:last-of-type {
-						position: relative;
-						top: -30px;
-					} 
-				
-					.period { color: #ff5851; }
-        } 
-
-				h4 { font-size: 5vh; }
-
-				ul { 
-					margin-top: 40px;
-					color: black; 
-					font-weight: 500;
-					font-size: 2vh;
-
-					li {
-						margin-bottom: 10px;
-					}
-				}
-      }
-		}
-
-    .parent-left-container-about {
-			width: 96vw;
-      min-height: 94vh;  
-      position: absolute;
-      top: 3%;
-      left: 2.0%;
-      color: $white;
-      background: #53c5d3;
-
 
       .intro-copy { 
 				width: 50%;
@@ -187,21 +138,21 @@ body.root-container {
   }
 }
 
-
-.parent-container .scene-main {
+.parent-left-container {
 	width: 96vw;
 	min-height: 94vh;  
 	position: absolute;
 	top: 3%;
 	left: 2.0%;
-	color: $white; background: #53c5d3;
+	color: $white; 
+	background: #53c5d3;
+	animation-duration: .8s;
+	transition-timing-function: ease-in;
+	animation-fill-mode: both;
 
 	.main-copy {
 		opacity: 0;
-		animation-name: fadeIn;
-		animation-delay: 1s;
-		animation-duration: 1s;
-
+		animation: fadeIn 1s forwards;
 		box-sizing: border-box; 
 		width: 70%;
 		margin: 0 auto;
@@ -233,27 +184,23 @@ body.root-container {
 			}
 		}
 	}
-
-	animation-duration: .8s;
-	transition-timing-function: ease-in;
-	animation-fill-mode: both;
 }
-.parent-container .scene-main--fadein {
+.parent-container .width-animation {
 	animation-name: width;
 }
-.smooth-state.is-exiting .scene-main {
+
+.parent-container.is-exiting .parent-left-container {
 	animation-direction: alternate-reverse;
 }
 
 @keyframes fadeIn {
 	0% {
-		opacity: 0;
+		opacity: 0; 
 	}
 
 	100% {
-		opacity: 1;
+		opacity: 1; 
 	}
-
 }
 
 @keyframes width {

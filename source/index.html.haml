@@ -1,26 +1,11 @@
--##main.parent-container
-  -#.parent-inner
-    -#.parent-right-container
-      -#.mailer-icon
-        -#%i.fa.fa-envelope
-        -#%i.fa.fa-envelope-open
-      -#= image_tag 'ricky-blink.gif', class: 'ricky-image'
-    -#.parent-left-container
-      -#.intro-copy
-        -#<strong>hello!</strong> <span>My name is Ricky Ahn. I am a San Francisco based Front End Developer specializing in UI/UX build for front and back end applications. I enjoy building sites and working with people!</span>
-        -#= link_to '/about.html' do
-          -#.learn-more-button
-            -#LEARN MORE
-
-
-#main.smooth-state.parent-container
+#main.parent-container
   .parent-inner
     .parent-right-container
       .mailer-icon
         %i.fa.fa-envelope
         %i.fa.fa-envelope-open
       = image_tag 'ricky-blink.gif', class: 'ricky-image'
-    .parent-left-container-about.scene-main-home.scene-main--fadein
+    .parent-left-container-about
       .intro-copy
         <strong>hello!</strong> <span>My name is Ricky Ahn. I am a San Francisco based Front End Developer specializing in UI/UX build for front and back end applications. I enjoy building sites and working with people!</span>
         = link_to '/about.html', class: 'about' do
