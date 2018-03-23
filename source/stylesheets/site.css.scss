@@ -66,35 +66,41 @@ body.root-container {
 .parent-container {
   min-height: 100vh;
 
+	.width-animation { 
+		animation-name: width; 
+		animation-duration: .8s;
+		transition-timing-function: ease-in;
+		animation-fill-mode: both;
+	}
+
   .parent-inner {
     padding-left: 2%;
 
-    .parent-left-container-about {
+		.parent-left-container {
 			width: 96vw;
-      min-height: 94vh;  
-      position: absolute;
-      top: 3%;
-      left: 2.0%;
-      color: $white;
-      background: #53c5d3;
-
-
-      .intro-copy { 
+			min-height: 94vh;  
+			position: absolute;
+			top: 3%;
+			left: 2.0%;
+			color: $white; 
+			background: #53c5d3;
+	
+			.intro-copy { 
 				width: 50%;
-        margin: 15% auto;
+				margin: 15% auto;
 
-        strong { 
-          position: relative;
-          top: 30px;
-          text-align: center;
-          font-size: 4rem; 
+				strong { 
+					position: relative;
+					top: 30px;
+					text-align: center;
+					font-size: 4rem; 
 					opacity: 0;
-        } 
+				} 
 
-        span { 
+				span { 
 					opacity: 0;
-          line-height: 30px; 
-        }
+					line-height: 30px; 
+				}
 
 				a { 
 					text-decoration: none; 
@@ -116,9 +122,44 @@ body.root-container {
 						}
 					}
 				}
+			}
 
-      }
-    }
+			.main-copy {
+				opacity: 0;
+				box-sizing: border-box; 
+				width: 70%;
+				margin: 0 auto;
+				word-wrap: break-word;
+				animation: fadeIn 2s forwards;
+				animation-delay: 1s;
+
+				h3 {
+					color: black; 
+					font-weight: 900;
+					font-size: 13vh;
+
+					&:last-of-type {
+						position: relative;
+						top: -30px;
+					} 
+				
+					.period { color: #ff5851; }
+				} 
+
+				h4 { font-size: 5vh; }
+
+				ul { 
+					margin-top: 40px;
+					color: black; 
+					font-weight: 500;
+					font-size: 2vh;
+
+					li {
+						margin-bottom: 10px;
+					}
+				}
+			}
+		}
 
     .parent-right-container {
       box-sizing: border-box; 
@@ -138,60 +179,17 @@ body.root-container {
   }
 }
 
-.parent-left-container {
-	width: 96vw;
-	min-height: 94vh;  
-	position: absolute;
-	top: 3%;
-	left: 2.0%;
-	color: $white; 
-	background: #53c5d3;
-	animation-duration: .8s;
-	transition-timing-function: ease-in;
-	animation-fill-mode: both;
-
-	.main-copy {
-		opacity: 0;
-		animation: fadeIn 1s forwards;
-		box-sizing: border-box; 
-		width: 70%;
-		margin: 0 auto;
-		word-wrap: break-word;
-
-		h3 {
-			color: black; 
-			font-weight: 900;
-			font-size: 13vh;
-
-			&:last-of-type {
-				position: relative;
-				top: -30px;
-			} 
-		
-			.period { color: #ff5851; }
-		} 
-
-		h4 { font-size: 5vh; }
-
-		ul { 
-			margin-top: 40px;
-			color: black; 
-			font-weight: 500;
-			font-size: 2vh;
-
-			li {
-				margin-bottom: 10px;
-			}
-		}
-	}
-}
-.parent-container .width-animation {
-	animation-name: width;
-}
-
 .parent-container.is-exiting .parent-left-container {
 	animation-direction: alternate-reverse;
 }
+
+
+#portfolio {
+	height: 4000px;
+	background: red;
+}
+
+
 
 @keyframes fadeIn {
 	0% {

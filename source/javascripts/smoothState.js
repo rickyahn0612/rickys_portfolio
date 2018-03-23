@@ -6,6 +6,7 @@
 			})
 		})
   };
+
 }(jQuery));
 
 $(document).ready(function() {
@@ -18,7 +19,7 @@ $(function() {
     options = {
       debug: true,
       prefetch: true,
-      cacheLength: 4,
+      cacheLength: 10,
       onStart: {
         duration: 800,
         render: function($container) {
