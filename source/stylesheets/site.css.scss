@@ -69,7 +69,7 @@ body.root-container {
 	.width-animation { 
 		animation-name: width; 
 		animation-duration: .8s;
-		transition-timing-function: ease-in;
+		transition-timing-function: ease-in-out;
 		animation-fill-mode: both;
 	}
 
@@ -89,7 +89,7 @@ body.root-container {
 				width: 50%;
 				margin: 15% auto;
 
-				strong { 
+				.hello-txt { 
 					position: relative;
 					top: 30px;
 					text-align: center;
@@ -133,20 +133,36 @@ body.root-container {
 				animation: fadeIn 2s forwards;
 				animation-delay: 1s;
 
+				.html5-graph {
+					width: 80%;
+					height: 4vh;
+					background: white;
+					margin-bottom: 3vh;
+
+					&:last-child {
+						margin-bottom: 0 !important;
+					}
+
+					.graph--fill {
+						width: 0%;
+						height: 4vh;
+						background: #EB6358;
+						animation: chartFill 2s ease-in-out forwards;
+						animation-delay: 2s;
+					}
+				}
+
 				h3 {
 					color: black; 
 					font-weight: 900;
 					font-size: 13vh;
-
-					&:last-of-type {
-						position: relative;
-						top: -30px;
-					} 
-				
-					.period { color: #ff5851; }
 				} 
 
-				h4 { font-size: 5vh; }
+				.period { color: #ff5851; }
+
+				h4 { 
+					font-size: 5vh; 
+				}
 
 				ul { 
 					margin-top: 40px;
@@ -176,6 +192,36 @@ body.root-container {
         display: block;
       } 
     }
+		
+		.mouse-down {
+			position: absolute;
+			bottom: 100%;
+			left: 49%;
+			box-sizing: border-box;
+			width: 25px;
+			height: 35px;
+			border-radius: 12px;
+			border: solid #cfcfcf 2px;
+			background: white;
+			text-align: center;
+			vertical-align: middle;
+			box-shadow: 3px 1px 15px 2px hsla(0,0%,0%,.2);
+			transition: all ease-in-out .23s;
+			animation: mouseDown 2s ease-in-out forwards;
+			animation-delay: 1s;
+
+			&:hover {
+				cursor: pointer;
+				box-shadow: 0 0 10px 1px hsla(0,0%,0%,.2);
+			}
+
+			.fa-chevron-down {
+				position: relative;
+				top: 13px;
+				font-size: 13px;
+			}
+
+		}
   }
 }
 
@@ -183,29 +229,12 @@ body.root-container {
 	animation-direction: alternate-reverse;
 }
 
+.parent-container.is-exiting .mouse-down {
+	animation-direction: alternate-reverse;
+}
+
 
 #portfolio {
 	height: 4000px;
-	background: red;
 }
 
-
-
-@keyframes fadeIn {
-	0% {
-		opacity: 0; 
-	}
-
-	100% {
-		opacity: 1; 
-	}
-}
-
-@keyframes width {
-  0% {
-    width: 96vw;
-  }
-  100% {
-    width: 48vw;
-  }
-}

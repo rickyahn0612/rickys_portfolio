@@ -5,6 +5,11 @@
 				$('.learn-more-button').animate({'opacity' : 1, 'margin-top' : '10px'}, 500)
 			})
 		})
+
+		$('.mouse-down').click(function() {
+			$('html, body').animate({scrollTop:$('#portfolio').position().top}, 2000);
+		});
+
   };
 
 }(jQuery));
@@ -18,14 +23,12 @@ $(function() {
   var $page = $("#main"),
     options = {
       debug: true,
-      prefetch: true,
-      cacheLength: 10,
+      prefetch: false,
+      cacheLength: 2,
       onStart: {
         duration: 800,
         render: function($container) {
-          // Add your CSS animation reversing class
           $container.addClass("is-exiting");
-          // Restart your animation
 					smoothState.restartCSSAnimations();
         }
       },

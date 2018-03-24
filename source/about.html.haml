@@ -8,19 +8,118 @@
 		.parent-left-container.width-animation
 			.main-copy
 				%h3
-					SKI
-				%h3
-					LLS<span class='period'>.</span>
-				.period
-				%h4
-					An overview of your digital strategy.
-				%ul
-					%li Responsive HTML5
-					%li BEM/CSS3 via Sass
-					%li Javascript frameworks (React, AngularJS)
-					%li JQuery
-					%li Content Management Systems (Wordpress, Squarespace, Weebly)
-					%li Ruby on Rails
-					%li Github
-					%li Photoshop
+					SKILLS<span class="period">.</span>
+				%hr
+				%br
+				HTML5
+				.html5-graph
+					.graph--fill
+				CSS
+				.html5-graph
+					.graph--fill
+				JavaScript
+				.html5-graph
+					.graph--fill
+
+				-#%ul
+					-#%li Responsive HTML5
+					-#%li BEM/CSS3 via Sass
+					-#%li Javascript frameworks (React, AngularJS)
+					-#%li JQuery
+					-#%li Content Management Systems (Wordpress, Squarespace, Weebly)
+					-#%li Ruby on Rails
+					-#%li Github
+					-#%li Photoshop
+		.mouse-down
+			.i.fas.fa-chevron-down
+
 #portfolio
+	.port-view-container
+		%ul
+			%li
+				.portfolio-grid-container
+					.port-description
+						%h3 
+							%span.thin-font The 
+							Base
+						%p 
+							lorem ipsum dolor sit amet, consectetur adipiscing elit. cras sed dui eget tellus lacinia vulputate. sed suscipit urna et convallis volutpat. fusce finibus nunc id nibh bibendum, nec tincidunt turpis semper.
+						%p.description 
+							%strong 
+								Front End:
+							HTML/CSS/JavaScript
+					.port-image-container
+						= image_tag 'screenshot_the_base.gif'
+					.clear
+			%li
+				.portfolio-grid-container
+					.port-description
+						%h3 
+							Ra-Solar 
+							%span.thin-font
+								Asset Management
+						%p 
+							lorem ipsum dolor sit amet, consectetur adipiscing elit. cras sed dui eget tellus lacinia vulputate. sed suscipit urna et convallis volutpat. fusce finibus nunc id nibh bibendum, nec tincidunt turpis semper.
+						%p.description 
+							%strong 
+								Front End:
+							HTML/CSS/JavaScript
+							%p.description
+								%strong 
+									Back End:
+								Ruby on Rails
+					.port-image-container
+						= image_tag 'screenshot_ra_power.gif'
+					.clear
+			%li
+				.portfolio-grid-container
+					.port-description
+						%h3 Acadia
+						%p 
+							lorem ipsum dolor sit amet, consectetur adipiscing elit. cras sed dui eget tellus lacinia vulputate. sed suscipit urna et convallis volutpat. fusce finibus nunc id nibh bibendum, nec tincidunt turpis semper.
+						%p.description 
+							%strong 
+								Front End:
+							HTML/CSS/Backbone
+						%p.description
+							%strong 
+								Back End:
+							Ruby on Rails
+					.port-image-container
+						= image_tag 'screenshot_acadia.gif'
+					.clear
+			%li
+				.portfolio-grid-container
+					.port-description
+						%h3 
+							Iron<span class='thin-font'>Ridge</span>
+						%p 
+							lorem ipsum dolor sit amet, consectetur adipiscing elit. cras sed dui eget tellus lacinia vulputate. sed suscipit urna et convallis volutpat. fusce finibus nunc id nibh bibendum, nec tincidunt turpis semper.
+						%p.description 
+							%strong 
+								Front End:
+							HTML/CSS/JavaScript 
+						%p.description 
+							%strong 
+								Back End:
+							Ruby on Rails
+					.port-image-container
+						= image_tag 'screenshot_ironridge.gif'
+					.clear
+			%li
+				.portfolio-grid-container
+					.port-description
+						%h3 
+							%span.thin-font Urban 
+							Futsal
+						%p 
+							lorem ipsum dolor sit amet, consectetur adipiscing elit. cras sed dui eget tellus lacinia vulputate. sed suscipit urna et convallis volutpat. fusce finibus nunc id nibh bibendum, nec tincidunt turpis semper.
+						%p.description 
+							%strong 
+								Front End:
+							Wordpress Project
+					.port-image-container
+						= image_tag 'screenshot_urban_futsal.gif'
+					.clear
+	.clear
+

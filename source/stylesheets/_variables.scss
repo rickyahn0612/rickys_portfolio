@@ -3,7 +3,7 @@ $dark-font: #333;
 $white: #fff;
 $black: #000;
 $shadow: #573000;
-
+$color: #E94E3D;
 $glitch: glitch .5s;
 
 @mixin orangeButton {
@@ -42,19 +42,43 @@ $glitch: glitch .5s;
 }
 
 @keyframes fadeIn {
+	0% {
+		margin-top: 20px;
+		opacity: 0; 
+	}
+
+	100% {
+		margin-top: 0;
+		opacity: 1; 
+	}
+}
+
+@keyframes width {
   0% {
-    opacity: 0;
+    width: 96vw;
   }
-
   100% {
-    opacity: 1;
+    width: 48vw;
   }
 }
 
+@keyframes mouseDown {
+	0% {
+		bottom: 100%;
+	}
 
-@keyframes fadeInRight {
-  100% {
-		width: 48vw;
-  }
+	100% {
+		bottom: 3%;
+	}
 }
 
+@keyframes chartFill {
+	0% {
+		width: 0;
+	}
+
+	100% {
+		width: 80%;
+	}
+
+}
