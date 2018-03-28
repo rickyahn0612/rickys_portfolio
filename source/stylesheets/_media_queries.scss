@@ -72,10 +72,18 @@
 		top: 30px;
 	}
 
-	.ricky-mobile-intro { display: block !important; }
+	.ricky-mobile-intro { 
+		display: block !important; 
+		width: 40%;
+		position: absolute;
+		top: 10px;
+		right: 20px;
+	}
 
 
-	.ricky-image { display: none !important; }
+	.ricky-image { 
+		display: none !important; 	
+	}
 
 	.legend {
 		font-size: 14px !important;
