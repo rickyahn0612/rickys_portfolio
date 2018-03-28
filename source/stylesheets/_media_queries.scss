@@ -60,6 +60,10 @@
 
 @media only screen and (max-width: 469px) {  
 
+	.parent-left-container { min-height: 92vh !important; }
+
+	.intro-copy { width: 80% !important }
+
 	.ricky-image { display: none !important; }
 
 	.legend {
