@@ -1,6 +1,8 @@
 @import 'variables';
 @import 'media_queries';
 
+.period { color: #ff5851; }
+
 .clear { clear: both; }
 
 .glitch { animation: $glitch; }
@@ -79,6 +81,7 @@ body.root-container {
 		.parent-left-container {
 			width: 96vw;
 			min-height: 94vh;  
+			overflow: hidden;
 			position: absolute;
 			top: 3%;
 			left: 2.0%;
@@ -133,32 +136,54 @@ body.root-container {
 				animation: fadeIn 2s forwards;
 				animation-delay: 1s;
 
-				.html5-graph {
-					width: 80%;
-					height: 4vh;
+				.skill-info { 
+					width: 100%; 
+					font-size: 13px;
+					
+					.counter { float: right; }
+				}
+
+				.skill-graph {
 					background: white;
 					margin-bottom: 3vh;
+					margin-top: .5vh;
 
-					&:last-child {
-						margin-bottom: 0 !important;
+					.graph--fill--html {
+						width: 0%;
+						height: 3.4vh;
+						background: #EB6358;
+						animation: chartFill-html 2s ease-in-out forwards;
+						animation-delay: 2s;
 					}
 
-					.graph--fill {
+					.graph--fill--css {
 						width: 0%;
-						height: 4vh;
+						height: 3.4vh;
 						background: #EB6358;
-						animation: chartFill 2s ease-in-out forwards;
+						animation: chartFill-css 2s ease-in-out forwards;
 						animation-delay: 2s;
+					}
+
+					.graph--fill--js {
+						width: 0%;
+						height: 3.4vh;
+						background: #EB6358;
+						animation: chartFill-js 2s ease-in-out forwards;
+						animation-delay: 2s;
+					}
+				}
+
+				#chartContainer {
+
+					.canvasjs-chart-canvas { 
 					}
 				}
 
 				h3 {
 					color: black; 
 					font-weight: 900;
-					font-size: 13vh;
+					font-size: 10vh;
 				} 
-
-				.period { color: #ff5851; }
 
 				h4 { 
 					font-size: 5vh; 
@@ -180,7 +205,7 @@ body.root-container {
     .parent-right-container {
       box-sizing: border-box; 
       width: 48vw;
-      min-height: 94vh;  
+      /*min-height: 94vh;  */
       position: absolute;
       top: 3%;
       right: 2.0%;
@@ -195,7 +220,7 @@ body.root-container {
 		
 		.mouse-down {
 			position: absolute;
-			bottom: 100%;
+			bottom: 4%;
 			left: 49%;
 			box-sizing: border-box;
 			width: 25px;
@@ -207,12 +232,28 @@ body.root-container {
 			vertical-align: middle;
 			box-shadow: 3px 1px 15px 2px hsla(0,0%,0%,.2);
 			transition: all ease-in-out .23s;
-			animation: mouseDown 2s ease-in-out forwards;
+			animation: mouseDown 2s ease-in-out infinite;
 			animation-delay: 1s;
 
 			&:hover {
 				cursor: pointer;
 				box-shadow: 0 0 10px 1px hsla(0,0%,0%,.2);
+				animation-play-state: paused;
+			}
+
+			&:hover > .tool-tip {
+				animation: fadeIn 1s ease-in-out forwards;
+			} 
+
+			.tool-tip {
+				opacity: 0;
+				position: absolute;
+				top: -20px;	
+				left: -40px;
+				width: 100px;	
+				text-align: center;
+				font-weight: 900;
+				font-size: 1.5vh;
 			}
 
 			.fa-chevron-down {
@@ -235,6 +276,138 @@ body.root-container {
 
 
 #portfolio {
+	position: absolute;
+	top: 100vh;
+	width: 100%;
 	height: 4000px;
 }
 
+.legend {
+	width: 40%;
+	position: absolute;
+	left: 70%;
+	font-size: 15px;
+	margin-top: 10%;
+	text-align: right;
+
+	.legend-item {
+		.circle-1 {
+			width: 15px;
+			height: 15px;
+			border: solid white 1px;
+			border-radius: 15px;
+			background: #B35752;
+			float: left;
+			margin: 2px 5px 0 0;
+		}
+
+		.circle-2 {
+			width: 15px;
+			height: 15px;
+			border: solid white 1px;
+
+			border-radius: 15px;
+			background: #6f67d7;
+			float: left;
+			margin: 2px 5px 0 0;
+		}
+
+		.circle-3 {
+			width: 15px;
+			height: 15px;
+			border: solid white 1px;
+
+			border-radius: 15px;
+			background: #EA9A57;
+			float: left;
+			margin: 2px 5px 0 0;
+		}
+
+		.circle-4 {
+			width: 15px;
+			height: 15px;
+			border: solid white 1px;
+
+			border-radius: 15px;
+			background: #2bcf0b;
+			float: left;
+			margin: 2px 5px 0 0;
+		}
+
+		span { float: left; }
+
+	}
+
+}
+
+figure {
+  display: block;
+  height: 0;
+  margin: 0 auto;
+  position: relative;
+	left: -20%;
+  font-size:16px;
+  font-size:1vw;
+  width: 70%;
+	margin-top: 10%;
+
+	h5 { 
+		color: black;
+		font-weight: 900;
+		font-size: 2vh;
+	}
+}
+
+svg {
+	position: relative;
+  display: block;
+  width: 100%;
+  position: relative;
+  top: 0;
+  left: 0;
+  overflow: visible;
+}
+
+circle {
+  fill: rgba(0,0,0,0);
+  stroke-width: 31.8309886184;
+  stroke-dasharray: 0,0,0,100;
+  stroke-dashoffset: 25;
+  animation: pie1 6s ease both;
+}
+
+.pie1 {
+	stroke: hsl(3, 39%, 51%);
+}
+
+.pie2 {
+	stroke: hsl(244, 58%, 62%);
+  animation-name: pie2;
+}
+
+.pie3 {
+	stroke: hsl(27, 78%, 63%);
+  animation-name: pie3;
+}
+
+.pie4 {
+	stroke: hsl(110, 90%, 43%);
+  animation-name: pie4;
+}
+
+/* 1st pie is 40% */
+@keyframes pie1 {
+  50%,100% {stroke-dasharray: 40,60,0,0;}
+}
+/* 2nd pie is 30% */
+@keyframes pie2 {
+  50%,100% {stroke-dasharray: 0,40,30,30;}
+}
+/* 3rd pie is 30% */
+@keyframes pie3 {
+  50%,100% {stroke-dasharray: 0,70,20,10;}
+}
+/* 4th pie is 10% */
+@keyframes pie4 {
+  50%,100% {stroke-dasharray: 0,90,10,0;}
+}

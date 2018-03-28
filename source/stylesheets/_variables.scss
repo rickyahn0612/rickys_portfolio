@@ -64,21 +64,43 @@ $glitch: glitch .5s;
 
 @keyframes mouseDown {
 	0% {
-		bottom: 100%;
+		bottom: 4%;
 	}
 
 	100% {
+		opacity: 1;
 		bottom: 3%;
 	}
 }
 
-@keyframes chartFill {
+@keyframes chartFill-html {
 	0% {
 		width: 0;
 	}
 
 	100% {
-		width: 80%;
+		width: 95%;
+	}
+}
+
+@keyframes chartFill-css {
+	0% {
+		width: 0;
 	}
 
+	100% {
+		width: 90%;
+	}
 }
+
+@keyframes chartFill-js {
+	0% {
+		width: 0;
+	}
+
+	100% {
+		width: 85%;
+	}
+}
+
+
