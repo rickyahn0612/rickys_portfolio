@@ -60,9 +60,20 @@
 
 @media only screen and (max-width: 469px) {  
 
-	.parent-left-container { min-height: 92vh !important; }
+	.parent-left-container { 
+		min-height: 92vh !important; 
+	}
 
-	.intro-copy { width: 80% !important }
+	.intro-copy { 
+		width: 40% !important ;
+		margin: 0 !important;
+		position: absolute !important;
+		left: 20px !important;
+		top: 30px;
+	}
+
+	.ricky-mobile-intro { display: block !important; }
+
 
 	.ricky-image { display: none !important; }
 
