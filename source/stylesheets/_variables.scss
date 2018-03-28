@@ -103,4 +103,20 @@ $glitch: glitch .5s;
 	}
 }
 
+/* 1st pie is 40% */
+@keyframes pie1 {
+  50%,100% {stroke-dasharray: 40,60,0,0;}
+}
+/* 2nd pie is 30% */
+@keyframes pie2 {
+  50%,100% {stroke-dasharray: 0,40,30,30;}
+}
+/* 3rd pie is 30% */
+@keyframes pie3 {
+  50%,100% {stroke-dasharray: 0,70,20,10;}
+}
+/* 4th pie is 10% */
+@keyframes pie4 {
+  50%,100% {stroke-dasharray: 0,90,10,0;}
+}
 
